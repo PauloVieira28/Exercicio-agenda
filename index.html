@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos - Estilo Excel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet"></head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agenda de Contatos</h1>
+        <form id="contactForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required pattern="[A-Za-zÀ-ÿ]+(?:\s+[A-Za-zÀ-ÿ]+)*" title="Por favor, insira apenas letras e espaços.">
+            
+            <label for="phone">Telefone:</label>
+            <input type="text" id="phone" required pattern="\d{11}" title="Digite o telefone com 11 dígitos, incluindo o DDD.">
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+        
+        <div id="alert" class="alert" style="display: none;"></div>
+
+
+        <table id="contactsTable" class="excel-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
